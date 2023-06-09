@@ -9,7 +9,7 @@ Não caia na rotina, use Nutrella.
 Com Nutrella, toda vez que rodar o código você receberá uma nova dieta.
 
 
-*Feito por;*
+*Feito por:*
  - Barbara Perez 220040
  - Sarah Freire  220043
  - Vitor Barelli 220072
