@@ -16,4 +16,4 @@ Com Nutrella, toda vez que rodar o código você receberá uma nova dieta.
  - Ygor Ruas     220066
 
 Repositório do trabalho final da disciplina de Redes Neurais e Algoritmos Genéticos do 3º Semestre ministrada pelo Profº Daniel Cassar na Ilum Escola de Ciências do Centro Nacional de Pesquisa em Energia e Materiais - CNPEM.
-![Logo do GitHub](https://github.com/Sarah-Freire/Trabalho-RNAG/raw/main/logo1.png)
+![Logo do GitHub](https://github.com/Sarah-Freire/Trabalho-RNAG/raw/main/A1.png)
