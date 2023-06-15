@@ -1,5 +1,10 @@
 ![Logo do GitHub](https://github.com/Sarah-Freire/Trabalho-RNAG/raw/main/A2.png)
 
+<h1 align="center"> Redes Neurais e Algoritmos Genéticos </h1>
+
+![LICENSE](https://img.shields.io/badge/LICENSE-GNU%20General%20Public%20License%20v3.0-blue)
+
+
 # Nutrella: O Algoritmo Genético que faz a sua dieta!
 
 O Nutrella é um algoritmo genético baseado no problema da mochila com restrição. O nosso algoritmo utiliza uma base de dados brasileira de alimentos para montar uma dieta otimizada para o seu bem-estar.
