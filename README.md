@@ -4,11 +4,11 @@
 
 <h1 align="center"> Nutrella: O Algoritmo Genético que faz a sua dieta! </h1>
 
-O Nutrella é um algoritmo genético baseado no problema da mochila com restrição. O nosso algoritmo utiliza uma base de dados brasileira de alimentos para montar uma dieta otimizada para o seu bem-estar.
+<h1 align="center"> O Nutrella é um algoritmo genético baseado no problema da mochila com restrição. O nosso algoritmo utiliza uma base de dados brasileira de alimentos para montar uma dieta otimizada para o seu bem-estar.
 
-Não caia na rotina, use Nutrella.
+<h1 align="center"> Não caia na rotina, use Nutrella.
 
-Com Nutrella, toda vez que rodar o código você receberá uma nova dieta.
+<h1 align="center"> Com Nutrella, toda vez que rodar o código você receberá uma nova dieta.
 
 ## Bem-vindo!
 
