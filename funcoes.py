@@ -20,19 +20,13 @@ def funcao_objetivo_dieta(individuo, calorias_ideais, peso):
       o limite diz que deveria ser, maior sendo essa distância, maior será a penalização.
       Peso: representa a penalidade de quão longe está o limite  da tentativa realizada
     """
-
- 
-
+    
     diferenca = 0
-
- 
 
     for alimento_candidato, limite in zip(individuo, calorias_ideais):
         diferenca = diferenca + abs(ord(alimento_candidato) - ord(limite))
     diferenca_tamanho = abs(len(individuo) - len(calorias_ideais))
     diferenca += diferenca_tamanho * peso
-
- 
 
     return diferenca
 
@@ -68,3 +62,12 @@ def computa_cesta(individuo, alimentos, ordem_dos_alimentos):
      
      return densidade_total, calorias_total                                                              
 
+### Criando a função que faz cruzamento entre as cestas
+
+def troca_de_alimentos(pai, mae):
+ # Operador de troca de alimentos usando de ponto simples.
+    ponto_de_corte = random.randint(1, len(pai) - 1)
+    filho1 = pai[:ponto_de_corte] + mae[ponto_de_corte:]
+    filho2 = mae[:ponto_de_corte] + pai[ponto_de_corte:]
+
+    return filho1, filho2
