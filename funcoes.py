@@ -1,13 +1,44 @@
 import random
-###############################################################################
-#                                 Observações                                 #
-##############################################################################+
+#####################################################################
+#                               Observações                         #
+#####################################################################
 
 "Foi utilizado o Black para formatação dessa seção."
 
-###############################################################################
-#                                   Suporte                                   #
-##############################################################################+
+#####################################################################
+#                               Suporte                             #
+#####################################################################
+
+### Criando a função que computa a cesta de compras
+def computa_cesta(individuo, alimentos, ordem_dos_alimentos):
+    """ Computa o valor total e calorias total de uma cesta de compras
+    Args:
+        individuo:
+            lista binária contendo informação de quais alimentos serão selecionados.
+        objetos:
+            Dicionário onde as chaves são os nomes dos alimentos e os valores são
+            dicionários com a informação do peso e valor.
+        ordem_dos_nomes:
+            Lista contendo a ordem dos nomes dos objetos.
+    Returns:
+        calorias_total: calorias total dos itens da cesta.
+        quantia_total: quantidade de alimentos dentro da cesta
+    """
+    
+    calorias_total = 0
+    densidade_total = 0
+    
+    for pegou_o_item_ou_nao, nome_do_alimento in zip(individuo,ordem_dos_nomes):
+        
+        if pegou_o_item_ou_nao == 1:
+            
+            densidade_nutri_alimento = alimentos[nome_do_alimento]["Densidade nutricional]
+            calorias_do_alimento = alimentos[nome_do_alimento]["calorias"]
+             
+            densidade_total = densidade_total + densidade_nutri_alimento 
+            calorias_total = calorias_total + calorias_do_alimento
+     
+     return densidade_total, calorias_total                                                              
 
 ####################################################################
 #                             Genes                                #
@@ -80,38 +111,6 @@ def selecao_roleta_max(populacao, fitness):
     return populacao_selecionada
 
 
-
-### Criando a função que computa a cesta de compras
-
-def computa_cesta(individuo, alimentos, ordem_dos_alimentos):
-    """ Computa o valor total e calorias total de uma cesta de compras
-    Args:
-        individuo:
-            lista binária contendo informação de quais alimentos serão selecionados.
-        objetos:
-            Dicionário onde as chaves são os nomes dos alimentos e os valores são
-            dicionários com a informação do peso e valor.
-        ordem_dos_nomes:
-            Lista contendo a ordem dos nomes dos objetos.
-    Returns:
-        calorias_total: calorias total dos itens da cesta.
-        quantia_total: quantidade de alimentos dentro da cesta
-    """
-    
-    calorias_total = 0
-    densidade_total = 0
-    
-    for pegou_o_item_ou_nao, nome_do_alimento in zip(individuo,ordem_dos_nomes):
-        
-        if pegou_o_item_ou_nao == 1:
-            
-            densidade_nutri_alimento = alimentos[nome_do_alimento]["Densidade nutricional]
-            calorias_do_alimento = alimentos[nome_do_alimento]["calorias"]
-             
-            densidade_total = densidade_total + densidade_nutri_alimento 
-            calorias_total = calorias_total + calorias_do_alimento
-     
-     return densidade_total, calorias_total                                                              
 ####################################################################
 #                           Cruzamento                             #
 ####################################################################
