@@ -25,18 +25,13 @@ Este repositório de GitHub é dedicado para a disciplina de Redes Neurais e Alg
 <p align="justify"> Guia para navegar no Git da Nutrella; </p>
 
 Desse modo, as seguintes pastas compõem esse repositório:
-- [AlgoritmosGeneticos](https://github.com/YgorRuas/Redes_Neuro_Anais/tree/main/AlgoritmosGeneticos): Contém os experimentos de Algoritmos Genéticos
-- [RedesNeurais](https://github.com/YgorRuas/Redes_Neuro_Anais/tree/main/RedesNeurais): Contém os experimentos de Redes Neurais
-- [.gitignore](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/.gitignore): Contém arquivos ignorados
+- [Alimentos - Calorias.xlsx](https://github.com/YgorRuas/Redes_Neuro_Anais/tree/main/AlgoritmosGeneticos):É uma tabela excel que possibilita encontrar os alimentos e seus dados de calorias e densidade nutricional
+- [Alimentos.xlsx](https://github.com/YgorRuas/Redes_Neuro_Anais/tree/main/RedesNeurais): É uma tabela excel, onde podemos encontrar os alimentos e seus dados de calorias, proteínas, lipídios, carboidratos e fibra alimentar
+- [Tratando dados.ipynb](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/.gitignore): Notebook o qual utiliza o arquivo excel "Alimentos.xlsx" e altera os seus dados para produzir os dados de densidade nutricional e gerar o arquivo excel "Alimentos - Calorias.xlsx".
 - [LICENSE](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/LICENSE): Apresenta a licença usada no repositório
 - [README.md](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/README.md): Guia para o repositório
-- [experimento_template.ipynb](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/experimento_template.ipynb): Template que cada experimento deve seguir
+- [funcoes.py](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/experimento_template.ipynb): Arquivo python a qual armazenam todas as funções utilizadas no decorrer do trabalho.
+- [trabalho_rnag.ipynb](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/experimento_template.ipynb): É o notebook aonde desenvolvemos o trabalho.
 
-Guia para navegar no Git da Nutrella;
-- Alimentos - Calorias.xlsx: É uma tabela excel aonde podemos encontrar os alimentos e seus dados de calorias e densidade nutricional
-- Alimentos.xlsx: É uma tabela excel aonde podemos encontrar os alimentos e seus dados de calorias, proteínas, lipídios, carboidratos e fibra alimentar.
-- Tratando dados.ipynb: É um notebook aonde pegamos o arquivo excel "Alimentos.xlsx" e manipulamos seus dados para produzir os dados de densidade nutricional e gerar o arquivo excel "Alimentos - Calorias.xlsx".
-- funcoes.py: É arquivo python aonde armazenamos todas as funções utilizadas no trabalho.
-- trabalho_rnag.ipynb: É o notebook aonde desenvolvemos o trabalho.
 
 ![Logo do GitHub](https://github.com/Sarah-Freire/Trabalho-RNAG/raw/main/A1.png)
