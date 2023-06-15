@@ -90,7 +90,7 @@ def populacao_cesta_alimento(tamanho, n):
         '''
     populacao = []
     for _ in range(tamanho):
-        populacao.append(individuo_cb(n))
+        populacao.append(individuo_cesta_alimentos(n))
     return populacao
 
 
@@ -143,7 +143,7 @@ def mutacao_dieta(individuo):
     """
     gene_a_ser_mutado = random.randint(0, len(individuo) - 1)
 
-    individuo[gene_a_ser_mutado] = gene_dieta()
+    individuo[gene_a_ser_mutado] = gene_Dieta()
 
     return individuo
 
@@ -168,11 +168,11 @@ def funcao_objetivo_dieta(individuo, calorias_ideais, peso):
         diferenca = diferenca + abs(ord(alimento_candidato) - ord(limite))
     diferenca_tamanho = abs(len(individuo) - len(calorias_ideais))
     diferenca += diferenca_tamanho * peso
-    valor_mochila, peso_mochila = computa_mochila(individuo, objetos, ordem_dos_nomes)
-    if peso_mochila > limite:
+    valor_cesta, peso_cesta = computa_cesta(individuo, objetos, ordem_dos_nomes)
+    if peso_cesta > limite:
         return diferença
     else:
-        return valor_mochila
+        return valor_cesta
 
                                                         
                                                                    
