@@ -1,6 +1,6 @@
 ![Logo do GitHub](https://github.com/Sarah-Freire/Trabalho-RNAG/raw/main/A2.png)
 
-![LICENSE](https://img.shields.io/badge/LICENSE-GNU%20General%20Public%20License%20v3.0-blue)
+![LICENSE](https://img.shields.io/badge/LICENSE-GNU%20General%20Public%20License%20v3.0-red)
 
 <h1 align="center"> Nutrella: O Algoritmo Genético que faz a sua dieta! </h1>
 
