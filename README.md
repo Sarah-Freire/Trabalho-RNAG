@@ -20,6 +20,18 @@ Este repositório de GitHub é dedicado para a disciplina de Redes Neurais e Alg
  - [Vitor Barelli](https://github.com/Leprechas) - 220072
  - [Ygor Ruas](https://github.com/YgorRuas) - 220066
 
+## Principais arquivos
+
+<p align="justify"> Guia para navegar no Git da Nutrella; </p>
+
+Desse modo, as seguintes pastas compõem esse repositório:
+- [AlgoritmosGeneticos](https://github.com/YgorRuas/Redes_Neuro_Anais/tree/main/AlgoritmosGeneticos): Contém os experimentos de Algoritmos Genéticos
+- [RedesNeurais](https://github.com/YgorRuas/Redes_Neuro_Anais/tree/main/RedesNeurais): Contém os experimentos de Redes Neurais
+- [.gitignore](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/.gitignore): Contém arquivos ignorados
+- [LICENSE](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/LICENSE): Apresenta a licença usada no repositório
+- [README.md](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/README.md): Guia para o repositório
+- [experimento_template.ipynb](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/experimento_template.ipynb): Template que cada experimento deve seguir
+
 Guia para navegar no Git da Nutrella;
 - Alimentos - Calorias.xlsx: É uma tabela excel aonde podemos encontrar os alimentos e seus dados de calorias e densidade nutricional
 - Alimentos.xlsx: É uma tabela excel aonde podemos encontrar os alimentos e seus dados de calorias, proteínas, lipídios, carboidratos e fibra alimentar.
