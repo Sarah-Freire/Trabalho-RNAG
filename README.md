@@ -28,7 +28,7 @@ __<summary>O que é o Nutrella e o motivo da sua ciação :orange:</summary>__
 
 <details>
 
-__<summary>Como foi feito :salad:</summary>__
+__<summary>Como foi feito 🥗:</summary>__
     
 <p align="justify">Adão. </p>
 </details>
