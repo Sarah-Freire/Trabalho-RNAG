@@ -38,7 +38,7 @@ __<summary>Como foi feito 🥗:</summary>__
 <p align="justify"> Guia para navegar no Git da Nutrella; </p>
 
 Desse modo, as seguintes pastas compõem esse repositório:
-- [Alimentos - Calorias.xlsx](https://github.com/YgorRuas/Redes_Neuro_Anais/tree/main/AlgoritmosGeneticos):É uma tabela excel que possibilita encontrar os alimentos e seus dados de calorias e densidade nutricional
+- [Alimentos - Calorias.xlsx](https://github.com/YgorRuas/Redes_Neuro_Anais/tree/main/AlgoritmosGeneticos): É uma tabela excel que possibilita encontrar os alimentos e seus dados de calorias e densidade nutricional
 - [Alimentos.xlsx](https://github.com/YgorRuas/Redes_Neuro_Anais/tree/main/RedesNeurais): É uma tabela excel, onde podemos encontrar os alimentos e seus dados de calorias, proteínas, lipídios, carboidratos e fibra alimentar
 - [Tratando dados.ipynb](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/.gitignore): Notebook o qual utiliza o arquivo excel "Alimentos.xlsx" e altera os seus dados para produzir os dados de densidade nutricional e gerar o arquivo excel "Alimentos - Calorias.xlsx".
 - [LICENSE](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/LICENSE): Apresenta a licença usada no repositório
