@@ -32,13 +32,13 @@ def computa_cesta(individuo, alimentos, ordem_dos_alimentos):
         
         if pegou_o_item_ou_nao == 1:
             
-            densidade_nutri_alimento = alimentos[nome_do_alimento]["Densidade nutricional]
+            densidade_nutri_alimento = alimentos[nome_do_alimento]["Densidade nutricional"]
             calorias_do_alimento = alimentos[nome_do_alimento]["calorias"]
              
             densidade_total = densidade_total + densidade_nutri_alimento 
             calorias_total = calorias_total + calorias_do_alimento
      
-     return densidade_total, calorias_total                                                              
+    return densidade_total, calorias_total                                                              
 
 ####################################################################
 #                             Genes                                #
