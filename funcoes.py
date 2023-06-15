@@ -71,3 +71,51 @@ def troca_de_alimentos(pai, mae):
     filho2 = mae[:ponto_de_corte] + pai[ponto_de_corte:]
 
     return filho1, filho2
+
+### Gene
+
+def gene_Dieta():
+    """Gera um gene válido para o problema da dieta
+    Return:
+      Um valor zero ou um.
+    """
+    lista = [0, 1]
+    gene = random.choice(lista)
+    return gene
+
+### Mutação
+
+def mutacao_dieta(individuo):
+
+    """Realiza a mutação de um gene no problema da dieta
+
+    Args:
+
+      individuo: uma lista representado um individuo no problema da dieta
+
+    Return:
+
+      Um individuo com um gene mutado.
+
+    """
+    gene_a_ser_mutado = random.randint(0, len(individuo) - 1)
+
+    individuo[gene_a_ser_mutado] = gene_dieta()
+
+    return individuo
+
+### Seleção
+
+def selecao_roleta_max(populacao, fitness):
+    """Seleciona individuos de uma população usando o método da roleta.
+    Nota: apenas funciona para problemas de maximização.
+    Args:
+      populacao: lista com todos os individuos da população
+      fitness: lista com o valor da funcao objetivo dos individuos da população
+    Returns:
+      População dos indivíduos selecionados.
+    """
+    populacao_selecionada = random.choices(populacao, weights=fitness, k=len(populacao))
+    return populacao_selecionada
+
+
