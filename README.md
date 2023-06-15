@@ -19,6 +19,20 @@ Este repositório de GitHub é dedicado para a disciplina de Redes Neurais e Alg
  - [Vitor Barelli](https://github.com/Leprechas) - 220072
  - [Ygor Ruas](https://github.com/YgorRuas) - 220066
 
+<details>
+    
+__<summary>O que é o Nutrella e o motivo da sua ciação :brain:</summary>__
+    
+<p align="justify"> São  </p>
+</details>
+
+<details>
+
+__<summary>Como foi feito :dna:</summary>__
+    
+<p align="justify">Adão. </p>
+</details>
+
 ## Principais arquivos
 
 <p align="justify"> Guia para navegar no Git da Nutrella; </p>
