@@ -125,7 +125,7 @@ def troca_de_alimentos(pai, mae):
     return filho1, filho2
 
 
-                                                                   ####################################################################
+####################################################################
 #                              Mutação                             #
 ####################################################################
 
@@ -151,7 +151,7 @@ def mutacao_dieta(individuo):
 ####################################################################
 #                       Função Objetivo- indivíduos                #
 ####################################################################
-  def funcao_objetivo_dieta(individuo, calorias_ideais, peso):
+def funcao_objetivo_dieta(individuo, calorias_ideais, peso):
     """Computa a funcao objetivo de um individuo no problema da dieta com limite de peso
     Args:
       individiuo: lista contendo os alimentos
@@ -169,10 +169,36 @@ def mutacao_dieta(individuo):
         diferenca = diferenca + abs(ord(alimento_candidato) - ord(limite))
     diferenca_tamanho = abs(len(individuo) - len(calorias_ideais))
     diferenca += diferenca_tamanho * peso
+    valor_mochila, peso_mochila = computa_mochila(individuo, objetos, ordem_dos_nomes)
+    if peso_mochila > limite:
+        return diferença
+    else:
+        return valor_mochila
 
-    return diferenca                                                                 
+                                                        
                                                                    
 ####################################################################
 #                       Função Objetivo- população                #
 ####################################################################
 
+def funcao_objetivo_pop_dieta(populacao, calorias, limite, ordem_dos_nomes, peso):
+    """Computa a fun. objetivo de uma populacao no problema da mochila
+    Args:
+      populacao:
+        Lista com todos os individuos da população
+      objetos:
+        Dicionário onde as chaves são os nomes dos objetos e os valores são
+        dicionários com a informação do peso e valor.
+      limite:
+        Número indicando o limite de peso que a mochila aguenta.
+      ordem_dos_nomes:
+        Lista contendo a ordem dos nomes dos objetos.
+    Returns:
+      Lista contendo o valor dos itens da mochila de cada indivíduo.
+    """
+    fitness = []
+    for individuo in populacao:
+        resultado.append(
+            funcao_objetivo_dieta(individuo, calorias, limite, ordem_dos_nomes, peso)
+        )
+    return fitness        
