@@ -9,6 +9,23 @@ import random
 #                                   Suporte                                   #
 ##############################################################################+
 
+####################################################################
+#                             Genes                                #
+####################################################################
+def gene_Dieta():
+    """Gera um gene válido para o problema da dieta
+    Return:
+      Um valor zero ou um.
+    """
+    lista = [0, 1]
+    gene = random.choice(lista)
+    return gene
+
+
+####################################################################
+#                            Indivíduos                            #
+####################################################################
+
 ### Criando o indivíduo para o problema
 def individuo_cesta_alimentos(n):
     """Gera um indíviduo para o problema das cesta de alimentos.
@@ -25,26 +42,44 @@ def individuo_cesta_alimentos(n):
         individuo.append(gene)
     return individuo
 
-def funcao_objetivo_dieta(individuo, calorias_ideais, peso):
-    """Computa a funcao objetivo de um individuo no problema da dieta com limite de peso
-    Args:
-      individiuo: lista contendo os alimentos
-      calorias_ideais: O valor retornado, dado a busca pelos ínvidos, junto de quem compõem a mochila
-    Returns:
-      A "distância" entre o alimento que passou do limite e o peso máximo de calorias da dieta. Essa distância
-      é medida alimento por alimento. Quanto mais distante uma dieta for da que
-      o limite diz que deveria ser, maior sendo essa distância, maior será a penalização.
-      Peso: representa a penalidade de quão longe está o limite  da tentativa realizada
-    """
+
+####################################################################
+#                            População                            #
+####################################################################
+
+def populacao_cesta_alimento(tamanho, n):
+    ''' Cria uma população no problema da sesta de alimentos baseado na função das caixas binárias.
     
-    diferenca = 0
+    Args:
+        tamanho: tamanho da população.
+        n: número de genes de um indivíduo.
+        
+    Returns:
+        Uma lista onde cada item é um indivíduo. Um indivíduo é uma lista com n genes.
+        '''
+    populacao = []
+    for _ in range(tamanho):
+        populacao.append(individuo_cb(n))
+    return populacao
 
-    for alimento_candidato, limite in zip(individuo, calorias_ideais):
-        diferenca = diferenca + abs(ord(alimento_candidato) - ord(limite))
-    diferenca_tamanho = abs(len(individuo) - len(calorias_ideais))
-    diferenca += diferenca_tamanho * peso
 
-    return diferenca
+####################################################################
+#                            Seleção                               #
+####################################################################
+
+def selecao_roleta_max(populacao, fitness):
+    """Seleciona individuos de uma população usando o método da roleta.
+    Nota: apenas funciona para problemas de maximização.
+    Args:
+      populacao: lista com todos os individuos da população
+      fitness: lista com o valor da funcao objetivo dos individuos da população
+    Returns:
+      População dos indivíduos selecionados.
+    """
+    populacao_selecionada = random.choices(populacao, weights=fitness, k=len(populacao))
+    return populacao_selecionada
+
+
 
 ### Criando a função que computa a cesta de compras
 
@@ -77,8 +112,9 @@ def computa_cesta(individuo, alimentos, ordem_dos_alimentos):
             calorias_total = calorias_total + calorias_do_alimento
      
      return densidade_total, calorias_total                                                              
-
-### Criando a função que faz cruzamento entre as cestas
+####################################################################
+#                           Cruzamento                             #
+####################################################################
 
 def troca_de_alimentos(pai, mae):
  # Operador de troca de alimentos usando de ponto simples.
@@ -88,18 +124,10 @@ def troca_de_alimentos(pai, mae):
 
     return filho1, filho2
 
-### Gene
 
-def gene_Dieta():
-    """Gera um gene válido para o problema da dieta
-    Return:
-      Um valor zero ou um.
-    """
-    lista = [0, 1]
-    gene = random.choice(lista)
-    return gene
-
-### Mutação
+                                                                   ####################################################################
+#                              Mutação                             #
+####################################################################
 
 def mutacao_dieta(individuo):
 
@@ -120,18 +148,31 @@ def mutacao_dieta(individuo):
 
     return individuo
 
-### Seleção
-
-def selecao_roleta_max(populacao, fitness):
-    """Seleciona individuos de uma população usando o método da roleta.
-    Nota: apenas funciona para problemas de maximização.
+####################################################################
+#                       Função Objetivo- indivíduos                #
+####################################################################
+  def funcao_objetivo_dieta(individuo, calorias_ideais, peso):
+    """Computa a funcao objetivo de um individuo no problema da dieta com limite de peso
     Args:
-      populacao: lista com todos os individuos da população
-      fitness: lista com o valor da funcao objetivo dos individuos da população
+      individiuo: lista contendo os alimentos
+      calorias_ideais: O valor retornado, dado a busca pelos ínvidos, junto de quem compõem a mochila
     Returns:
-      População dos indivíduos selecionados.
+      A "distância" entre o alimento que passou do limite e o peso máximo de calorias da dieta. Essa distância
+      é medida alimento por alimento. Quanto mais distante uma dieta for da que
+      o limite diz que deveria ser, maior sendo essa distância, maior será a penalização.
+      Peso: representa a penalidade de quão longe está o limite  da tentativa realizada
     """
-    populacao_selecionada = random.choices(populacao, weights=fitness, k=len(populacao))
-    return populacao_selecionada
+    
+    diferenca = 0
 
+    for alimento_candidato, limite in zip(individuo, calorias_ideais):
+        diferenca = diferenca + abs(ord(alimento_candidato) - ord(limite))
+    diferenca_tamanho = abs(len(individuo) - len(calorias_ideais))
+    diferenca += diferenca_tamanho * peso
+
+    return diferenca                                                                 
+                                                                   
+####################################################################
+#                       Função Objetivo- população                #
+####################################################################
 
