@@ -21,9 +21,12 @@ Este repositório de GitHub é dedicado para a disciplina de Redes Neurais e Alg
 
 <details>
     
-__<summary>O que é o Nutrella e o motivo da sua ciação :orange:</summary>__
+__<summary>O que é o Nutrella e o motivo da sua criação :orange:</summary>__
     
-<p align="justify"> São  </p>
+<p align="justify"> Nutrella é o nome dado a este código, o qual procura uma dieta razoável para o usuário. Desse modo, usando Algoritmos Genéticos para gerar a dieta e, para que seja possível, tem-se um dataframe contendo uma lista de vários alimentos comuns na alimentação brasileira. Pensando nisso, o diferencial em relação aos demais concorrentes é que aqui, toda vez que após interagir com o código uma dieta nova será retornada, de moto a evitar alimentações repetitivas, mantendo a qualidade nas escolhas, estas que são dadas pelos melhores indivíduos (alimentos) encontrados na busca usado pelo algoritmo.  
+
+Além disso, sua criação se deu pelo objetivo de cientificamente poder proporcionar uma dieta com alimentos acessíveis para a população, dado o objetivo de cada usuário.
+</p>
 </details>
 
 <details>
