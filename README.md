@@ -12,7 +12,7 @@ Com Nutrella, toda vez que rodar o código você receberá uma nova dieta.
 
 ## Bem-vindo!
 
-<p align="justify"> Este repositório de GitHub é dedicado para a disciplina de Redes Neurais e Algoritmos Genéticos do 3° semestre do Bacharelado em Ciência e Tecnologia da Ilum Escola de Ciência, faculdade parte do Centro Nacional de Pesquisa em Energia e Materiais (CNPEM), ministrada pelo Profº [Cassar. Daniel](https://github.com/drcassar/template_rnag). O projeto ainda está em desenvolvimento e alterações são constantes nos arquivos. Desse modo, abaixo temos uma explicação conceitual do que será abordado nesse repositório.</p>
+Este repositório de GitHub é dedicado para a disciplina de Redes Neurais e Algoritmos Genéticos do 3° semestre do Bacharelado em Ciência e Tecnologia da Ilum Escola de Ciência, faculdade parte do Centro Nacional de Pesquisa em Energia e Materiais (CNPEM), ministrada pelo Profº [Cassar. Daniel](https://github.com/drcassar/template_rnag). O projeto ainda está em desenvolvimento e alterações são constantes nos arquivos. Desse modo, abaixo temos uma explicação conceitual do que será abordado nesse repositório. 
 
 *Feito por:*
  - [Barbara Perez 220040](https://github.com/barbaraperez)
