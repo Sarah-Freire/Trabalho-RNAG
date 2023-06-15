@@ -9,6 +9,22 @@ import random
 #                                   Suporte                                   #
 ##############################################################################+
 
+### Criando o indivíduo para o problema
+def individuo_cesta_alimentos(n):
+    """Gera um indíviduo para o problema das cesta de alimentos.
+    
+    Args:
+        n: número de genes do indivíduo
+    
+    Return:
+        Uma lista com n genes. Cada gene é um valor zero ou um.
+    """
+    individuo = []
+    for i in range(n):
+        gene = gene_Dieta()
+        individuo.append(gene)
+    return individuo
+
 def funcao_objetivo_dieta(individuo, calorias_ideais, peso):
     """Computa a funcao objetivo de um individuo no problema da dieta com limite de peso
     Args:
