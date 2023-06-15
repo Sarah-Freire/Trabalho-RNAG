@@ -10,10 +10,10 @@ Com Nutrella, toda vez que rodar o código você receberá uma nova dieta.
 
 
 *Feito por:*
- - Barbara Perez 220040
- - Sarah Freire  220043
- - Vitor Barelli 220072
- - Ygor Ruas     220066
+ - [Barbara Perez 220040](https://github.com/barbaraperez)
+ - [Sarah Freire  220043](https://github.com/Sarah-Freire)
+ - [Vitor Barelli 220072](https://github.com/Leprechas)
+ - [Ygor Ruas     220066](https://github.com/YgorRuas)
 
 Repositório do trabalho final da disciplina de Redes Neurais e Algoritmos Genéticos do 3º Semestre ministrada pelo Profº Daniel Cassar na Ilum Escola de Ciências do Centro Nacional de Pesquisa em Energia e Materiais - CNPEM.
 
