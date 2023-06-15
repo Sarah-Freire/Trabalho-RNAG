@@ -12,13 +12,26 @@ Com Nutrella, toda vez que rodar o código você receberá uma nova dieta.
 
 ## Bem-vindo!
 
-Este repositório de GitHub é dedicado para a disciplina de Redes Neurais e Algoritmos Genéticos do 3° semestre do Bacharelado em Ciência e Tecnologia da Ilum Escola de Ciência, faculdade parte do Centro Nacional de Pesquisa em Energia e Materiais (CNPEM), ministrada pelo Profº [Cassar. Daniel](https://github.com/drcassar/template_rnag). O projeto é um trabalho realizado para o atividade final da disciplina . Desse modo, abaixo temos uma explicação conceitual do trabalho. 
+Este repositório de GitHub é dedicado para a disciplina de Redes Neurais e Algoritmos Genéticos do 3° semestre do Bacharelado em Ciência e Tecnologia da Ilum Escola de Ciência, faculdade parte do Centro Nacional de Pesquisa em Energia e Materiais (CNPEM), ministrada pelo Profº [Cassar. Daniel](https://github.com/drcassar/template_rnag). O projeto é um trabalho realizado para o atividade final da disciplina. Desse modo, abaixo temos uma explicação do trabalho e os responsaveis: 
 
-*Feito por:*
  - [Barbara Perez](https://github.com/barbaraperez) - 220040
  - [Sarah Freire](https://github.com/Sarah-Freire) - 220043
  - [Vitor Barelli](https://github.com/Leprechas) - 220072
  - [Ygor Ruas](https://github.com/YgorRuas) - 220066
+
+<details>
+    
+__<summary>O que é o Nutrella e o motivo da sua ciação :orange:</summary>__
+    
+<p align="justify"> São  </p>
+</details>
+
+<details>
+
+__<summary>Como foi feito :dna:</summary>__
+    
+<p align="justify">Adão. </p>
+</details>
 
 ## Principais arquivos
 
