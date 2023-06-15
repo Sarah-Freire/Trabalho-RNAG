@@ -21,7 +21,7 @@ Este repositório de GitHub é dedicado para a disciplina de Redes Neurais e Alg
 
 <details>
     
-__<summary>O que é o Nutrella e o motivo da sua ciação :brain:</summary>__
+__<summary>O que é o Nutrella e o motivo da sua ciação :orange:</summary>__
     
 <p align="justify"> São  </p>
 </details>
