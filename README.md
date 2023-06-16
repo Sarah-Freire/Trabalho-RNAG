@@ -47,7 +47,7 @@ Desse modo, as seguintes pastas compõem esse repositório:
 - [LICENSE](https://github.com/Sarah-Freire/Trabalho-RNAG/blob/main/LICENSE): Apresenta a licença usada no repositório
 - [README.md](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/README.md): Guia para o repositório
 - [funcoes.py](https://github.com/Sarah-Freire/Trabalho-RNAG/blob/main/funcoes.py): Arquivo python a qual armazenam todas as funções utilizadas no decorrer do trabalho.
-- [trabalho_rnag.ipynb](https://github.com/YgorRuas/Redes_Neuro_Anais/blob/main/experimento_template.ipynb): É o notebook onde o trabalho foi desenvolvido.
+- [trabalho_rnag.ipynb](https://github.com/Sarah-Freire/Trabalho-RNAG/blob/main/trabalho_rnag.ipynb): É o notebook onde o trabalho foi desenvolvido.
 
 
 ![Logo do GitHub](https://github.com/Sarah-Freire/Trabalho-RNAG/raw/main/A1.png)
