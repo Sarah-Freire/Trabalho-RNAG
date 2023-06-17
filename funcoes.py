@@ -10,7 +10,7 @@ import random
 #####################################################################
 
 ### Criando a função que computa a cesta de compras
-def computa_cesta(individuo, alimentos, ordem_dos_alimentos):
+def computa_cesta(individuo, SUPERMERCADO, ORDEM_DOS_NOMES):
     """ Computa o valor total e calorias total de uma cesta de compras
     Args:
         individuo:
@@ -28,12 +28,12 @@ def computa_cesta(individuo, alimentos, ordem_dos_alimentos):
     calorias_total = 0
     densidade_total = 0
     
-    for pegou_o_item_ou_nao, nome_do_alimento in zip(individuo,ordem_dos_nomes):
+    for pegou_o_item_ou_nao, nome_do_alimento in zip(individuo,ORDEM_DOS_NOMES):
         
         if pegou_o_item_ou_nao == 1:
             
-            densidade_nutri_alimento = alimentos[nome_do_alimento]["Densidade nutricional"]
-            calorias_do_alimento = alimentos[nome_do_alimento]["calorias"]
+            densidade_nutri_alimento = SUPERMERCADO[nome_do_alimento]["Densidade nutricional"]
+            calorias_do_alimento = SUPERMERCADO[nome_do_alimento]["calorias"]
              
             densidade_total = densidade_total + densidade_nutri_alimento 
             calorias_total = calorias_total + calorias_do_alimento
@@ -150,7 +150,10 @@ def mutacao_dieta(individuo):
 ####################################################################
 #                       Função Objetivo- indivíduos                #
 ####################################################################
-def funcao_objetivo_dieta(individuo, calorias_ideais, peso):
+
+### Versão Ygor
+
+#def funcao_objetivo_dieta(individuo, calorias_ideais, peso):
     """Computa a funcao objetivo de um individuo no problema da dieta com limite de peso
     Args:
       individiuo: lista contendo os alimentos
@@ -162,25 +165,54 @@ def funcao_objetivo_dieta(individuo, calorias_ideais, peso):
       Peso: representa a penalidade de quão longe está o limite  da tentativa realizada
     """
     
-    diferenca = 0
+    
+    #diferenca = 0
 
-    for alimento_candidato, limite in zip(individuo, calorias_ideais):
-        diferenca = diferenca + abs(ord(alimento_candidato) - ord(limite))
-    diferenca_tamanho = abs(len(individuo) - len(calorias_ideais))
-    diferenca += diferenca_tamanho * peso
-    valor_cesta, peso_cesta = computa_cesta(individuo, objetos, ordem_dos_nomes)
-    if peso_cesta > limite:
-        return diferença
+    #for alimento_candidato, limite in zip(individuo, calorias_ideais):
+     #   diferenca = diferenca + abs(ord(alimento_candidato) - ord(limite))
+   # diferenca_tamanho = abs(len(individuo) - len(calorias_ideais))
+  #  diferenca += diferenca_tamanho * peso
+   # valor_cesta, peso_cesta = computa_cesta(individuo, objetos, ordem_dos_nomes)
+   # if peso_cesta > limite:
+    #    return diferença
+    #else:
+     #   return valor_cesta
+
+# Versão Barbara
+
+def funcao_objetivo_cesta(individuo, alimentos, calorias, ORDEM_DOS_NOMES):
+    """Computa a funcao objetivo de um candidato no problema da mochila.
+    Args:
+      individiuo:
+        Lista binária contendo a informação de quais objetos serão selecionados.
+      objetos:
+        Dicionário onde as chaves são os nomes dos objetos e os valores são
+        dicionários com a informação do peso e valor.
+      limite:
+        Número indicando o limite de peso que a mochila aguenta.
+      ordem_dos_nomes:
+        Lista contendo a ordem dos nomes dos objetos.
+    Returns:
+      Valor total dos itens inseridos na mochila considerando a penalidade para
+      quando o peso excede o limite.
+    """
+
+    densidade_nutri_alimento, calorias_total = computa_cesta(individuo,SUPERMERCADO,ORDEM_DOS_NOMES)
+                                                  
+    
+    if calorias_total > calorias:
+        return 0.01
     else:
-        return valor_cesta
-
+        return densidade_nuti_alimento
                                                         
                                                                    
 ####################################################################
 #                       Função Objetivo- população                #
 ####################################################################
 
-def funcao_objetivo_pop_dieta(populacao, calorias, limite, ordem_dos_nomes, peso):
+#### Versão Ygor
+
+#def funcao_objetivo_pop_dieta(populacao, calorias, limite, ordem_dos_nomes, peso):
     """Computa a fun. objetivo de uma populacao no problema da mochila
     Args:
       populacao:
@@ -195,9 +227,37 @@ def funcao_objetivo_pop_dieta(populacao, calorias, limite, ordem_dos_nomes, peso
     Returns:
       Lista contendo o valor dos itens da mochila de cada indivíduo.
     """
-    fitness = []
+    #fitness = []
+    #for individuo in populacao:
+       # resultado.append(
+        #    funcao_objetivo_dieta(individuo, calorias, limite, ordem_dos_nomes, peso)
+    #    )
+   # return fitness        
+
+### Versão Barbara
+
+def funcao_objetivo_pop_dieta(populacao, alimentos, calorias, ORDEM_DOS_NOMES):
+    """Computa a fun. objetivo de uma populacao no problema da mochila
+    Args:
+      populacao:
+        Lista com todos os individuos da população
+      objetos:
+        Dicionário onde as chaves são os nomes dos objetos e os valores são
+        dicionários com a informação do peso e valor.
+      limite:
+        Número indicando o limite de peso que a mochila aguenta.
+      ordem_dos_nomes:
+        Lista contendo a ordem dos nomes dos objetos.
+    Returns:
+      Lista contendo o valor dos itens da mochila de cada indivíduo.
+    """
+
+    resultado = []
     for individuo in populacao:
         resultado.append(
-            funcao_objetivo_dieta(individuo, calorias, limite, ordem_dos_nomes, peso)
+            funcao_objetivo_cesta(
+                individuo, alimentos, calorias, ORDEM_DOS_NOMES
+            )
         )
-    return fitness        
+
+    return resultado
