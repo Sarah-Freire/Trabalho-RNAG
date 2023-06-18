@@ -11,7 +11,7 @@ import random
 
 ### Criando a função que computa a cesta de compras
 def computa_cesta(individuo, SUPERMERCADO, ORDEM_DOS_NOMES):
-    """ Computa o valor total e calorias total de uma cesta de compras
+    """ Computa o valor total de calorias total de uma cesta de compras
     Args:
         individuo:
             lista binária contendo informação de quais alimentos serão selecionados.
@@ -202,10 +202,10 @@ def funcao_objetivo_cesta(individuo, SUPERMERCADO, calorias, ORDEM_DOS_NOMES):
     densidade_nutri_alimento, calorias_total = computa_cesta(individuo,SUPERMERCADO,ORDEM_DOS_NOMES)
                                                   
     
-    if calorias_total > calorias:
-        return 0.01
+    if calorias_total <= calorias:
+        return densidade_nutri_alimento
     else:
-        return densidade_nuti_alimento
+        return 0.0001
                                                         
                                                                    
 ####################################################################
