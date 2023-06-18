@@ -25,12 +25,14 @@ def computa_cesta(individuo, SUPERMERCADO, ORDEM_DOS_NOMES):
         quantia_total: quantidade de alimentos dentro da cesta
     """
     
-    calorias_total = 0
     densidade_total = 0
+    calorias_total = 0
+    
     
     for pegou_o_item_ou_nao, nome_do_alimento in zip(individuo,ORDEM_DOS_NOMES):
         
         if pegou_o_item_ou_nao == 1:
+            
             
             densidade_nutri_alimento = SUPERMERCADO[nome_do_alimento]["Densidade nutricional"]
             calorias_do_alimento = SUPERMERCADO[nome_do_alimento]["calorias"]
@@ -115,11 +117,11 @@ def selecao_roleta_max(populacao, fitness):
 #                           Cruzamento                             #
 ####################################################################
 
-def troca_de_alimentos(pai, mae):
+def cruzamento_ponto_simples(mae, pai):
  # Operador de troca de alimentos usando de ponto simples.
-    ponto_de_corte = random.randint(1, len(pai) - 1)
+    ponto_de_corte = random.randint(1, len(mae) - 1)
     filho1 = pai[:ponto_de_corte] + mae[ponto_de_corte:]
-    filho2 = mae[:ponto_de_corte] + pai[ponto_de_corte:]
+    filho2 = mae[:ponto_de_corte] + mae[ponto_de_corte:]
 
     return filho1, filho2
 
