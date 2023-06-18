@@ -180,7 +180,7 @@ def mutacao_dieta(individuo):
 
 # Versão Barbara
 
-def funcao_objetivo_cesta(individuo, alimentos, calorias, ORDEM_DOS_NOMES):
+def funcao_objetivo_cesta(individuo, SUPERMERCADO, calorias, ORDEM_DOS_NOMES):
     """Computa a funcao objetivo de um candidato no problema da mochila.
     Args:
       individiuo:
@@ -236,7 +236,7 @@ def funcao_objetivo_cesta(individuo, alimentos, calorias, ORDEM_DOS_NOMES):
 
 ### Versão Barbara
 
-def funcao_objetivo_pop_dieta(populacao, alimentos, calorias, ORDEM_DOS_NOMES):
+def funcao_objetivo_pop_dieta(populacao, SUPERMERCADO, calorias, ORDEM_DOS_NOMES):
     """Computa a fun. objetivo de uma populacao no problema da mochila
     Args:
       populacao:
@@ -256,7 +256,7 @@ def funcao_objetivo_pop_dieta(populacao, alimentos, calorias, ORDEM_DOS_NOMES):
     for individuo in populacao:
         resultado.append(
             funcao_objetivo_cesta(
-                individuo, alimentos, calorias, ORDEM_DOS_NOMES
+                individuo, SUPERMERCADO, calorias, ORDEM_DOS_NOMES
             )
         )
 
