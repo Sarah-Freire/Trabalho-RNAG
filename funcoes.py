@@ -202,10 +202,10 @@ def funcao_objetivo_cesta(individuo, SUPERMERCADO, calorias, ORDEM_DOS_NOMES):
     densidade_nutri_alimento, calorias_total = computa_cesta(individuo,SUPERMERCADO,ORDEM_DOS_NOMES)
                                                   
     
-    if calorias_total <= calorias:
-        return densidade_nutri_alimento
-    else:
+    if calorias_total > calorias:
         return 0.0001
+    else:
+        return densidade_nutri_alimento
                                                         
                                                                    
 ####################################################################
