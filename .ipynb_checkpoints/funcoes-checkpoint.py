@@ -45,13 +45,14 @@ def computa_cesta(individuo, SUPERMERCADO, ORDEM_DOS_NOMES):
 ####################################################################
 #                             Genes                                #
 ####################################################################
-def gene_Dieta():
+def gene_Dieta(peso=[1,1]):
     """Gera um gene válido para o problema da dieta
     Return:
       Um valor zero ou um.
     """
     lista = [0, 1]
-    gene = random.choice(lista)
+    gene = random.choices(lista, weights=peso,k=1)[0]
+    
     return gene
 
 
@@ -71,7 +72,7 @@ def individuo_cesta_alimentos(n):
     """
     individuo = []
     for i in range(n):
-        gene = gene_Dieta()
+        gene = gene_Dieta(peso=[10,1])
         individuo.append(gene)
     return individuo
 
@@ -229,7 +230,7 @@ def funcao_objetivo_cesta(individuo, supermercado, limite_de_calorias, ordem_dos
                                                   
     
     if calorias_total > limite_de_calorias:
-        return 0.0001
+        return 0.0000001
     else:
         return densidade_nutri_alimento     
                                                                    
