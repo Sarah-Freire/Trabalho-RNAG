@@ -182,7 +182,7 @@ def mutacao_dieta(individuo):
 
 # Versão Barbara
 
-def funcao_objetivo_cesta(individuo, SUPERMERCADO, calorias, ORDEM_DOS_NOMES):
+# def funcao_objetivo_cesta(individuo, SUPERMERCADO, calorias, ORDEM_DOS_NOMES):
     """Computa a funcao objetivo de um candidato no problema da mochila.
     Args:
       individiuo:
@@ -199,14 +199,39 @@ def funcao_objetivo_cesta(individuo, SUPERMERCADO, calorias, ORDEM_DOS_NOMES):
       quando o peso excede o limite.
     """
 
-    densidade_nutri_alimento, calorias_total = computa_cesta(individuo,SUPERMERCADO,ORDEM_DOS_NOMES)
+#    densidade_nutri_alimento, calorias_total = computa_cesta(individuo,SUPERMERCADO,ORDEM_DOS_NOMES)
                                                   
     
-    if calorias_total > calorias:
+   # if calorias_total > calorias:
+    #    return 0.0001
+  #  else:
+     #   return densidade_nutri_alimento
+                                                    # Versão Sarah
+
+def funcao_objetivo_cesta(individuo, supermercado, limite_de_calorias, ordem_dos_nomes):
+    """Computa a funcao objetivo de um candidato no problema da mochila.
+    Args:
+      individiuo:
+        Lista binária contendo a informação de quais objetos serão selecionados.
+      objetos:
+        Dicionário onde as chaves são os nomes dos objetos e os valores são
+        dicionários com a informação do peso e valor.
+      limite:
+        Número indicando o limite de peso que a mochila aguenta.
+      ordem_dos_nomes:
+        Lista contendo a ordem dos nomes dos objetos.
+    Returns:
+      Valor total dos itens inseridos na mochila considerando a penalidade para
+      quando o peso excede o limite.
+    """
+
+    densidade_nutri_alimento, calorias_total = computa_cesta(individuo, supermercado,ordem_dos_nomes)
+                                                  
+    
+    if calorias_total > limite_de_calorias:
         return 0.0001
     else:
-        return densidade_nutri_alimento
-                                                        
+        return densidade_nutri_alimento     
                                                                    
 ####################################################################
 #                       Função Objetivo- população                #
@@ -238,7 +263,34 @@ def funcao_objetivo_cesta(individuo, SUPERMERCADO, calorias, ORDEM_DOS_NOMES):
 
 ### Versão Barbara
 
-def funcao_objetivo_pop_dieta(populacao, SUPERMERCADO, calorias, ORDEM_DOS_NOMES):
+#def funcao_objetivo_pop_dieta(populacao, SUPERMERCADO, calorias, ORDEM_DOS_NOMES):
+    """Computa a fun. objetivo de uma populacao no problema da mochila
+    Args:
+      populacao:
+        Lista com todos os individuos da população
+      objetos:
+        Dicionário onde as chaves são os nomes dos objetos e os valores são
+        dicionários com a informação do peso e valor.
+      limite:
+        Número indicando o limite de peso que a mochila aguenta.
+      ordem_dos_nomes:
+        Lista contendo a ordem dos nomes dos objetos.
+    Returns:
+      Lista contendo o valor dos itens da mochila de cada indivíduo.
+    """
+
+ #   resultado = []
+ #   for individuo in populacao:
+ #       resultado.append(
+ #           funcao_objetivo_cesta(
+ #               individuo, SUPERMERCADO, calorias, ORDEM_DOS_NOMES
+         #   )
+      #  )
+
+  #  return resultado
+### Versão Sarah
+
+def funcao_objetivo_pop_dieta(populacao, supermercado, limite_de_calorias, ordem_dos_nomes):
     """Computa a fun. objetivo de uma populacao no problema da mochila
     Args:
       populacao:
@@ -258,7 +310,7 @@ def funcao_objetivo_pop_dieta(populacao, SUPERMERCADO, calorias, ORDEM_DOS_NOMES
     for individuo in populacao:
         resultado.append(
             funcao_objetivo_cesta(
-                individuo, SUPERMERCADO, calorias, ORDEM_DOS_NOMES
+                individuo, supermercado, limite_de_calorias, ordem_dos_nomes
             )
         )
 
