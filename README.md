@@ -31,7 +31,7 @@ Além disso, sua criação se deu pelo objetivo de cientificamente poder proporc
 
 <details>
 
-__<summary>Como foi feito 🥗:</summary>__
+__<summary>Como foi feito 🥗</summary>__
     
 <p align="justify">O código foi feito fazendo uma adaptação no algoritmo genético para o problema clássico da mochila. </p>
 </details>
@@ -41,7 +41,7 @@ __<summary>Como foi feito 🥗:</summary>__
 <p align="justify"> Guia para navegar no Git da Nutrella; </p>
 
 Desse modo, as seguintes pastas compõem esse repositório:
-- [Alimentos - Calorias.xlsx](https://github.com/Sarah-Freire/Trabalho-RNAG/blob/main/Alimentos%20-%20Calorias.xlsx)): É uma tabela excel que possibilita encontrar os alimentos e seus dados de calorias e densidade nutricional
+- [Alimentos - Calorias.xlsx](https://github.com/Sarah-Freire/Trabalho-RNAG/blob/main/Alimentos%20-%20Calorias.xlsx): É uma tabela excel que possibilita encontrar os alimentos e seus dados de calorias e densidade nutricional
 - [Alimentos.xlsx](https://github.com/Sarah-Freire/Trabalho-RNAG/blob/main/Alimentos.xlsx): É uma tabela excel, onde podemos encontrar os alimentos e seus dados de calorias, proteínas, lipídios, carboidratos e fibra alimentar
 - [Tratando dados.ipynb](https://github.com/Sarah-Freire/Trabalho-RNAG/blob/main/Tratando%20dados.ipynb): Notebook o qual utiliza o arquivo excel "Alimentos.xlsx" e altera os seus dados para produzir os dados de densidade nutricional e gerar o arquivo excel "Alimentos - Calorias.xlsx".
 - [LICENSE](https://github.com/Sarah-Freire/Trabalho-RNAG/blob/main/LICENSE): Apresenta a licença usada no repositório
