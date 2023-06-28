@@ -58,11 +58,6 @@ Desse modo, como grande mudança temos a função obevtivo, já que além de bus
 </p>
 </details>
 
- 
-</p>
-</details>
-
-<details>
 
 ## Principais arquivos
 
