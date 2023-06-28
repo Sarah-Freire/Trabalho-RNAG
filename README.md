@@ -58,6 +58,14 @@ Desse modo, como grande mudança temos a função obevtivo, já que além de bus
 </p>
 </details>
 
+<details>
+ 
+__<summary>O que é o cálculo de Harris-Benedict ⚖️:</summary>__
+    
+<p align="justify"> No cálculo de harris-benedict se calcula a taxa metabólica basal(TMB), desse modo, tem-se a taxa metabólica basal que é o tanto de energia/calorias que o seu corpo precisa em repouso absoluto para realizar suas funções vitais, como respiração, circulação sanguínea, manutenção da temperatura corporal, funcionamento dos órgãos internos e produção de hormônios. Ademais, o cálculo do harris-benedict possibilita adicionar o fator exercício físico, este que pode implicar no aumento dessa taxa metabólica basal.
+
+</p>
+</details>
 
 ## Principais arquivos
 
